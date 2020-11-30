@@ -19,7 +19,7 @@ pipeline {
                }
           } 
           
-          stage('Build Number') {
+          /* stage('Build Number') {
                steps {
                    echo "Build_Number:$BUILD_NUMBER"
                }
@@ -50,7 +50,7 @@ pipeline {
                                              
                 }
           }  
-          */
+          
           stage('Update Image Version') {
                steps {
                           sh label: '', script: '''sed -i s/latest/$BUILD_NUMBER/ my_deploy.yml'''
@@ -64,6 +64,6 @@ pipeline {
                                               ssh jenkins2@172.31.35.224 kubectl apply -f my_deploy.yml
                                               ssh jenkins2@172.31.35.224 kubectl apply -f my_service.yml'''
                }
-          }
+          } */
      }
 }
