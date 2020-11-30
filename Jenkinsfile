@@ -9,7 +9,7 @@ pipeline {
           
           stage('Git Clone') {
                steps {
-                    git 'https://github.com/AnandMehta14/Docker.git'
+                    git 'https://github.com/AnandMehta14/bc-jenkins.git'
                }
           }
          
